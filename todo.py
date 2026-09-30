@@ -8,6 +8,10 @@ def show_tasks():
     for i, item in enumerate(task, 1):
         print(f"{i}. {item}")
 
+def clear_tasks():
+    task.clear()
+    print("Список справ очищено")
+
 while True:
     print("1 - Додати до списку")
     print("2 - Видалити зі списку")
@@ -19,7 +23,6 @@ while True:
         print("Додати до списку")
         task_input = input("Введіть справу для списку: ")
         task.append(task_input)
-
     elif number == 2:
         print("Видалити зі списку")
         task_number = int(input("Введіть номер справи: "))
